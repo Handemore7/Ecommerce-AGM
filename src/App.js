@@ -8,6 +8,9 @@ import { Banner, ProductCard, NavBar, CategoriesCard } from './components';
 var information = {
   "_id": "62e437d535a547472b99d754",
   "title": "fats and oils test",
+  "price": "18.255",
+  "currency": "USD",
+  "discount": "20",
   "hsCode": "code",
   "tags": "tags",
   "imgP": "https://res.cloudinary.com/dtafodkms/image/upload/v1659123667/imgs/ahddat0dhdu5b2dfqnnq.webp",
