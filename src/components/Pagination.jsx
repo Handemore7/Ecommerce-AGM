@@ -9,7 +9,7 @@ const Pagination = ({itemsPerPage, totalItems, paginate}) => {
 
     return (
     <div>
-        {totalPages.map(pageNumber => (<a key={pageNumber} href='!#' onClick={() => paginate(pageNumber)}>{pageNumber}</a>))}
+        {totalPages.map(pageNumber => (<a key={pageNumber} onClick={() => paginate(pageNumber)}>{pageNumber}</a>))}
     </div>
   )
 }

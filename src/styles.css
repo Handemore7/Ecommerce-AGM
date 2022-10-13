@@ -8,7 +8,7 @@ body {
 
 .cardContainer{
     background-color: white;
-    width: 250px;
+    width: 20%;
     height: 350px;
     border-radius: 25px;
     position: relative;
@@ -91,5 +91,5 @@ body {
 }
 
 .AllCardsContainer{
-
+    
 }

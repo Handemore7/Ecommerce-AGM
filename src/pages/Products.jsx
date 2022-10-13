@@ -6,8 +6,6 @@ const Products = ({products}) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(9)
 
-  console.log(products);
-
   //Logica para la paginacion
   const indexLastItem = currentPage * itemsPerPage;
   const indexFirstItem = indexLastItem - itemsPerPage;
