@@ -2,17 +2,23 @@
 import React from 'react';
 
 //Importar algunos Iconos de la librería de React Icons
-import { AiOutlineHeart } from 'react-icons/ai'
+import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
+import { BiGitCompare } from 'react-icons/bi'
 
-var xd = 0;
 const ProductCard = ({info}) => {
+
   return (
-    <div className='pt-1 pl-2 pb-1 pr-2 w-60 h-80 bg-slate-300 border-[#352a99] border-solid border-2 rounded-2xl flex flex-col'>
-      <AiOutlineHeart />
-      <img src={info.gallery[0]} alt="image1" className='w-40'/>
-      <h1>{info.title}</h1>
-      <span>{info.description}</span>
-      <span>{info.price} {info.currency}</span>
+    <div className='cardContainer'>
+      {info.favorite ? <div className='hearth'><AiOutlineHeart /></div> : <div className='hearth'><AiFillHeart /></div>}
+      <img src={info.gallery[0]} alt="image1" className='cardImage'/>
+      <span className='cardCategory'>{info.category}</span>
+      <h1 className='cardTitle'>{info.title}</h1>
+      <p className='cardDescription'>{info.description}</p>
+      <span className='cardPrice'>${info.productPrice} USD</span>
+      <div className='cardButtons'>
+        <button className='cardAdd'>Add to cart</button>
+        <button className='cardCompare'><BiGitCompare /></button>
+      </div>
     </div>
   )
 }

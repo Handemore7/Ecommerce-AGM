@@ -3,7 +3,7 @@ Link de referencia: https://testing-e-commerce.vercel.app/shop
 
 # Herramientas usadas
 - React
-- Tailwind
+- Axios
 
 # Para ejecutar:
 Abrir el código en el IDE, asegurandose de estar en la carpeta correcta ejecutar el comando npm install, una vez instalado todo lo necesario ejecutar el comando npm start
