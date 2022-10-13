@@ -8,8 +8,8 @@ const Pagination = ({itemsPerPage, totalItems, paginate}) => {
     }
 
     return (
-    <div>
-        {totalPages.map(pageNumber => (<a key={pageNumber} onClick={() => paginate(pageNumber)}>{pageNumber}</a>))}
+    <div className='paginationContainer'>
+        {totalPages.map(pageNumber => (<a className='paginationItem' key={pageNumber} onClick={() => paginate(pageNumber)}>{pageNumber}</a>))}
     </div>
   )
 }

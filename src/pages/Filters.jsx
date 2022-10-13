@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { SearchBar } from '../components';
 
 
@@ -9,8 +9,9 @@ const Filters = ({setData}) => {
     }
 
   return (
-    <div>
-        <SearchBar setData={handleData}/>
+    <div className='filtersContainer'>
+      <span className='filtersTitle'>Filtros:</span>
+      <SearchBar setData={handleData}/>
     </div>
   )
 }

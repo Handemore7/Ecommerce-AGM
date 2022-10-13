@@ -1,10 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-*{font-family: 'Lato', sans-serif;}
+*{
+    font-family: 'Lato', sans-serif;
+    margin: 0px;
+}
 
 body {
     background-color: rgb(228, 228, 228);
 }
+
+/* Banner */
+
+.bannerContainer{
+
+}
+
+/* Barra de navegación */
+
+.navBarContainer{
+    width: 100%;
+    background-color: rgb(255, 255, 255, .8);
+    height: 10vh;
+    position: absolute;
+    top: 2vh;
+    border-radius: 30px;
+}
+
+/* Sección de CATEGORIAS */
+
+.categoriesContainer{
+
+}
+
+/* sección de FILTROS */
+
+.productsSection{
+    display: flex;
+}
+
+.filtersContainer{
+    width: 20%;
+    height: 60vh;
+    padding: 20px 10px;
+}
+
+.filtersTitle{
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+/* Sección de TARJETAS */
+
+.productsContainer{
+    width: 80%;
+}
+
+/* TARJETAS */
 
 .cardContainer{
     background-color: white;
@@ -90,6 +141,21 @@ body {
     border-radius: 50%;
 }
 
-.AllCardsContainer{
-    
+/* PAGINATION */
+
+.paginationContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.paginationItem{
+    cursor: pointer;
+    margin-right: 20px;
+    width: 5vh;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
 }
