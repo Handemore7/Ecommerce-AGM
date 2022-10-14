@@ -23,8 +23,9 @@ const NavBar = () => {
         <div className='navBarIcon'>
           <AiOutlineShoppingCart />
         </div>
+        <span className='navBarAboutUs'>News</span>
         <div className='navBarDropDowns'>
-            <DropDown value={'News Account'} info={['Account','Sign Up','Sign In']}/>
+            <DropDown value={'Account'} info={['Account','Sign Up','Sign In']}/>
         </div>
         <div className='navBarDropDowns'>
             <DropDown value={'Language'} info={['English','Portuguese']}/>

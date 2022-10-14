@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { MdKeyboardArrowDown } from 'react-icons/md';
 
 const DropDown = ({value, info}) => {
 
@@ -6,7 +7,8 @@ const DropDown = ({value, info}) => {
   
   return (
     <div className='DropDown'>
-        <div onClick={() => setDropOn(!DropOn)}>{value}</div>
+        <div className='DropDownValue' onClick={() => setDropOn(!DropOn)}>{value}<MdKeyboardArrowDown /></div>
+        
         <div className='dropDownOptions'>
             {DropOn && info?.map((item) =>(
                 <div key={item} className='dropDownOpt'>{item}</div>
