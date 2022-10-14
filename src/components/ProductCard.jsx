@@ -3,9 +3,19 @@ import React from 'react';
 
 //Importar algunos Iconos de la librería de React Icons
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
-import { BiGitCompare } from 'react-icons/bi'
+import { BiGitCompare } from 'react-icons/bi';
 
+//Se recibe la información de una tarjeta como parametro
 const ProductCard = ({info}) => {
+
+  //Funciones que son accionadas con los botones de las tarjetas
+  const handleAddButton = (e) => {
+    alert(info.title + ' ha sido añadido al carrito')
+  }
+
+  const handleCompareButton = (e) => {
+    alert(info.title + ' Comparación')
+  }
 
   return (
     <div className='cardContainer'>
@@ -16,8 +26,8 @@ const ProductCard = ({info}) => {
       <p className='cardDescription'>{info.description}</p>
       <span className='cardPrice'>${info.productPrice} USD</span>
       <div className='cardButtons'>
-        <button className='cardAdd'>Add to cart</button>
-        <button className='cardCompare'><BiGitCompare /></button>
+        <button className='cardAdd' onClick={handleAddButton}>Add to cart</button>
+        <button className='cardCompare' onClick={handleCompareButton}><BiGitCompare /></button>
       </div>
     </div>
   )

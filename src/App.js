@@ -10,6 +10,9 @@ import Filters from './pages/Filters';
 
 //Axios para hacer el llamado a la API
 import axios from "axios";
+import { DataContext } from './dataContext';
+
+//Importar el contexto
 
 
 //Pantalla principal, se renderizan solo los componentes y paginas, desde aquí se debe hacer el llamado a la API para conseguir la info aunque tendría sentido hacer el llamado a la API desde la pagina de Products, pasarle qué tipo de productos queremos maybe
@@ -19,6 +22,11 @@ function App() {
   const url = "https://testing-agriglobal-market.ue.r.appspot.com/api/getproducts/admisiones";
   const [products, setProducts] = useState(null);
   const [searchFilter, setSearchFilter] = useState('');
+  const [productsFilter, setProductsFilter] = useState(null)
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(9);
+
   
   //Mediante axios llamar a la API para conseguir la data y guardarla en un estado "products"
   useEffect(() => {
@@ -34,23 +42,36 @@ function App() {
   
   //Primero se filtran los productos aqui, porque la página de "Products" debería recibir los productos filtrados y solo encargarse de renderizar las tarjetas y su respectiva paginación.
   return (
-    <div className="">
+    <DataContext.Provider value={
+      {
+        products,
+        currentPage, 
+        setCurrentPage, 
+        itemsPerPage,
+        setSearchFilter,
+        searchFilter,
+        setProductsFilter,
+        productsFilter
+      }
+      }>
+      <div className="">
 
-      <Banner />
-      <NavBar />
-      <CategoriesCard />
-      <div className='productsSection'>
-        <Filters setData={setSearchFilter}/>
-        
-        {products ? products.filter((filterName) => {
-          searchFilter.toLowerCase() === '' ?
-            filterProducts.push(filterName) : filterName.title.toLowerCase().includes(searchFilter.toLowerCase())?
-              filterProducts.push(filterName): <div>Filtrando...</div>;
-        }) : 
-        <div>Esperando información...</div>}
-        {<Products products={filterProducts}/>}
+        <Banner />
+        <NavBar />
+        <CategoriesCard />
+        <div className='productsSection'>
+          <Filters />
+          
+          {products ? products.filter((filterName) => {
+            searchFilter.toLowerCase() === '' ?
+              filterProducts.push(filterName) : filterName.title.toLowerCase().includes(searchFilter.toLowerCase())?
+                filterProducts.push(filterName): <div>Filtrando...</div>;
+          }) : 
+          <div>Esperando información...</div>}
+          <Products products={filterProducts}/>
+        </div>
       </div>
-    </div>
+    </DataContext.Provider>
   );
 }
 
