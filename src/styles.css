@@ -18,12 +18,86 @@ body {
 /* Barra de navegación */
 
 .navBarContainer{
-    width: 100%;
+    width: 90%;
     background-color: rgb(255, 255, 255, .8);
     height: 10vh;
     position: absolute;
     top: 2vh;
     border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    justify-self: center;
+    margin-left: 5vw;
+}
+
+.navBarImg{
+    width: 15%;
+}
+
+.navBarContent{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 80%;
+    margin-right: 5vw;
+    color: rgb(33, 12, 71);
+    font-weight: bold;
+}
+
+.navBarAboutUs{
+    cursor: pointer;
+    padding: 10px 20px;
+}
+.navBarAboutUs:hover{
+    color: rgb(74, 138, 221);
+}
+
+.navBarSearch{
+    display: flex;
+
+}
+.navBarCat{
+    border: 2px solid blue;
+    border-radius: 30px;
+    transform: translateX(15px);
+    background-color: #dff2f5;
+}
+
+.navBarCat div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navBarSearch input{
+    border: none;
+    padding-left: 20px;
+    outline: none;
+}
+
+.navBarSearchIcon{
+    transform: translateX(-20px);
+}
+
+.navBarIcon{
+    display: flex;
+    width: 6vh;
+    height: 6vh;
+    background-color: rgb(21, 148, 233);
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 50%;
+}
+
+.navBarDropDowns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10vw;
+    height: 5vh;
 }
 
 /* Sección de CATEGORIAS */
