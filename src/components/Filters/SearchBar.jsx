@@ -12,7 +12,7 @@ const SearchBar = () => {
 
   return (
     <div>
-        <input className='filtersInput' type="text" placeholder='Buscar productos...' onChange={handleSearchInputChange} value={searchFilter}/>
+        <input className='filtersInput' type="text" placeholder='Search...' onChange={handleSearchInputChange} value={searchFilter}/>
     </div>
   )
 }

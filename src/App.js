@@ -62,7 +62,6 @@ function App() {
 
         <Banner />
         <NavBar />
-        <CategoriesCard />
         <div className='productsSection'>
           <Filters />
           

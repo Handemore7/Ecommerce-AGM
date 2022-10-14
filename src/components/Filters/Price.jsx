@@ -4,8 +4,8 @@ const Price = () => {
   return (
     <div>
       <h2 className='filtersSection'>Filter prices</h2>
-      <input className='filtersInput' type="text" placeholder='Price from:'/>
-      <input className='filtersInput' type="text" placeholder='Price to:'/>
+      <input className='filtersInput' type="number" placeholder='Price from:'/>
+      <input className='filtersInput' type="number" placeholder='Price to:'/>
     </div>
   )
 }

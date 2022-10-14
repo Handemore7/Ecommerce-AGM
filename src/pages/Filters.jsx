@@ -15,7 +15,7 @@ const Filters = () => {
 
   return (
     <div className='filtersContainer'>
-      <span className='filtersTitle'>Filtros:</span>
+      <span className='filtersTitle'>Filters:</span>
       <div className='filtersContent'>
         <SearchBar />
         <Price />
@@ -24,7 +24,7 @@ const Filters = () => {
         <QuantityAvailable />
         <DispatchStimate />
       </div>
-      <input type="button" value="Limpiar" onClick={handleCleanFilters}/>
+      <input className='clearFiltersBtn' type="button" value="Clear filters" onClick={handleCleanFilters}/>
     </div>
   )
 }

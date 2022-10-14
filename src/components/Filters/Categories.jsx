@@ -6,11 +6,12 @@ const Categories = () => {
 
   const [DropOn, setDropOn] = useState(false);
   const { products } = useContext(DataContext);
-  const [ DropDownValue , setDropDownValue] = useState('Elegir categoría')
+  const [ DropDownValue , setDropDownValue] = useState('> Select a category...')
 
   return (
     <div>
-      <div onClick={() => setDropOn(!DropOn)}>{DropDownValue}</div>
+      <h2 className='filtersSection'>Filter Categories</h2>
+      <div className='filterCatContainer' onClick={() => setDropOn(!DropOn)}>{DropDownValue}</div>
         <ul className='categoriesOptions'>
             {DropOn && getCategories(products)?.map((item) =>(
                 <li key={item} className='categoriesOpt' onClick={(e)=>setDropDownValue(e.target.outerText)}>{item}</li>

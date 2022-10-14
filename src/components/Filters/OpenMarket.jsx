@@ -4,11 +4,11 @@ const OpenMarket = () => {
   return (
     <div>
       <h2 className='filtersSection'>Open Market</h2>
-      <div>
+      <div className='filtersCheckbox'>
         <input type="checkbox" name="" id="" />
         <span>Yes</span>
       </div>
-      <div>
+      <div className='filtersCheckbox'>
         <input type="checkbox" name="" id="" />
         <span>No</span>
       </div>
