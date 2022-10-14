@@ -24,7 +24,9 @@ const ProductCard = ({info}) => {
       <span className='cardCategory'>{info.category}</span>
       <h1 className='cardTitle'>{info.title}</h1>
       <p className='cardDescription'>{info.description}</p>
-      <span className='cardPrice'>${info.productPrice} USD</span>
+      {/* Las tarjetas que tengan un precio undefined aparecen como valor no disponible */}
+      <span className='cardPrice'>{info.productPrice == undefined ? <span>Valor no disponible</span> : `$ ${Number(info.productPrice).toFixed(2)} USD`}</span>
+
       <div className='cardButtons'>
         <button className='cardAdd' onClick={handleAddButton}>Add to cart</button>
         <button className='cardCompare' onClick={handleCompareButton}><BiGitCompare /></button>

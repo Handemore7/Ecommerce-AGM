@@ -12,5 +12,3 @@ Link de prueba: (futuro link de prueba)
 # Cosas por hacer:
 - Cartas de ofertas y no disponibles
 - Añadir acciones a las cartas de producto (Hover)
-- UI improvement
-- Funcionalidades en botones de añadir y comparar (añadir a un carro real y ver que puede servir en comparar)
