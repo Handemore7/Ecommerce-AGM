@@ -7,12 +7,15 @@
 
 body {
     background-color: rgb(228, 228, 228);
+    overflow-x: hidden;
 }
 
 /* Banner */
 
 .bannerContainer{
+}
 
+.bannerContainer img{
 }
 
 /* Barra de navegación */
@@ -32,7 +35,7 @@ body {
 }
 
 .navBarImg{
-    width: 15%;
+    height: 100%;
 }
 
 .navBarContent{
@@ -256,3 +259,39 @@ body {
     border: 1px solid black;
 }
 
+.dropDownOptions{
+    position: absolute;
+    transform: translateY(4vh);
+}
+
+.dropDownOpt{
+    background-color: white;
+    text-align: center;
+    border: 1px solid black;
+    height: 3.5vh;
+    padding: 3px 10px;
+}
+
+.dropDownOpt:hover{
+    background-color: rgb(106, 197, 240);
+    color: white;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.DropDown{
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+/* CATEGORIES */
+
+
+.categoriesOptions{
+
+}
+
+.categoriesOpt{
+    
+}

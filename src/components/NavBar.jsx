@@ -1,6 +1,7 @@
 import React from 'react';
 import { AiOutlineShoppingCart, AiOutlineHeart, AiOutlineSearch }from 'react-icons/ai';
 import { MdKeyboardArrowDown }from 'react-icons/md';
+import DropDown from '../utils/DropDown';
 
 const NavBar = () => {
   return (
@@ -23,12 +24,10 @@ const NavBar = () => {
           <AiOutlineShoppingCart />
         </div>
         <div className='navBarDropDowns'>
-            <span>News Account</span>
-            <div><MdKeyboardArrowDown /></div>
+            <DropDown value={'News Account'} info={['Account','Sign Up','Sign In']}/>
         </div>
         <div className='navBarDropDowns'>
-            <span>Language</span>
-            <div><MdKeyboardArrowDown /></div>
+            <DropDown value={'Language'} info={['English','Portuguese']}/>
         </div>
       </div>
     </div>

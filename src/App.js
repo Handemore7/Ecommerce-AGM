@@ -12,6 +12,7 @@ import Filters from './pages/Filters';
 import axios from "axios";
 import { DataContext } from './dataContext';
 
+
 //Importar el contexto
 
 
@@ -22,7 +23,9 @@ function App() {
   const url = "https://testing-agriglobal-market.ue.r.appspot.com/api/getproducts/admisiones";
   const [products, setProducts] = useState(null);
   const [searchFilter, setSearchFilter] = useState('');
-  const [productsFilter, setProductsFilter] = useState(null)
+  const [productsFilter, setProductsFilter] = useState(null);
+
+  const [categories, setCategories] = useState(['op1','op2','op3'])
 
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(9);
@@ -51,7 +54,9 @@ function App() {
         setSearchFilter,
         searchFilter,
         setProductsFilter,
-        productsFilter
+        productsFilter,
+        setCategories,
+        categories
       }}>
       <div className="">
 
