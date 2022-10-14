@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { SearchBar } from '../components';
+import { SearchBar, Price, OpenMarket, Categories, QuantityAvailable, DispatchStimate } from '../components';
 import { DataContext } from '../dataContext';
 
 
@@ -16,7 +16,14 @@ const Filters = () => {
   return (
     <div className='filtersContainer'>
       <span className='filtersTitle'>Filtros:</span>
-      <SearchBar />
+      <div className='filtersContent'>
+        <SearchBar />
+        <Price />
+        <OpenMarket/>
+        <Categories />
+        <QuantityAvailable />
+        <DispatchStimate />
+      </div>
       <input type="button" value="Limpiar" onClick={handleCleanFilters}/>
     </div>
   )

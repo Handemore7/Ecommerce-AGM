@@ -18,7 +18,7 @@ import { DataContext } from './dataContext';
 //Pantalla principal, se renderizan solo los componentes y paginas, desde aquí se debe hacer el llamado a la API para conseguir la info aunque tendría sentido hacer el llamado a la API desde la pagina de Products, pasarle qué tipo de productos queremos maybe
 
 function App() {
-  //Algunas variables importantes, url del endpoint para conseguir la data, el estado de "products" para almacenar los datos, el estado "searchFilter" es para tener el string de busqueda para filtrar los products, searchFilter acá recibe la data pero la manda desde el componente searchBar
+  //Algunas variables importantes, url del endpoint para conseguir la data, el estado de "products" para almacenar los datos, el estado "searchFilter" es para tener el string de busqueda para filtrar los products, searchFilter acá recibe la data pero la manda desde el componente SearchBar
   const url = "https://testing-agriglobal-market.ue.r.appspot.com/api/getproducts/admisiones";
   const [products, setProducts] = useState(null);
   const [searchFilter, setSearchFilter] = useState('');
@@ -52,8 +52,7 @@ function App() {
         searchFilter,
         setProductsFilter,
         productsFilter
-      }
-      }>
+      }}>
       <div className="">
 
         <Banner />
