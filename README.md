@@ -10,5 +10,4 @@ Abrir el código en el IDE, asegurandose de estar en la carpeta correcta ejecuta
 Link de prueba: (futuro link de prueba)
 
 # Cosas por hacer:
-- Cartas de ofertas y no disponibles
-- Añadir acciones a las cartas de producto (Hover)
+- Cartas de ofertas
