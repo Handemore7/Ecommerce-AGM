@@ -1,4 +1,3 @@
-//useState para manejos de estados y useEffect para el llamado de la API
 import { useState, useEffect } from 'react';
 
 //Se importan todos los componentes existentes que aparezcan directamente en la web
@@ -94,7 +93,7 @@ function App() {
         <NavBar />
         <CategoriesCard data={categoriesData}/>
         <div className='productsSection'>
-          <Filters />
+        <Filters />
           {/* Se filtran los productos, validando si lo escrito en el input está contenido en los productos, aquellos que tengan lo puesto en el input en su nombre son retornados y se envían como un arreglo de objetos a Products para que se rendericen los ya filtrados*/}
           {products ? products.filter((filterName) => {
             searchFilter.toLowerCase() === '' ?

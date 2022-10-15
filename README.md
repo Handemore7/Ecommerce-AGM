@@ -17,10 +17,10 @@ En el fondo se encuentra un botón que resetea el valor de los filtros.
 
 - **Sección de productos**
 > Se bajan los datos con un llamado a un endpoint mediante Axios, con esta información se crean las tarjetas, las cuales aquellas que tienen descuento o son etiquetadas como favoritas tienen ciertos cambios, al igual que aquellas en las que ya no hay productos disponibles por lo cual aparecen deshabilitadas.
-En el fondo se encuentra tambien una paginación
+Tanto en el fondo como en la parte de arriba se encuentra una paginación.
 
 - **Tarjeta de un producto**
-> En la tarjeta de un producto hay un Hover para destacar cuando el usuario pase el mouse, el botón de "Add to cart" solo muestra un alert con el nombre del producto, el botón de comparar (el de las flechas) hace que las tarjetas disponibles dejen de estarlo y dandole una segunda vez vuelve a estar disponible.
+> En la tarjeta de un producto hay un Hover para destacar cuando el usuario pase el mouse, el botón de "Add to cart" muestra un alert con el nombre del producto, al igual que el botón de comparar
 
 - **Footer**
 > Algunos hover añadidos

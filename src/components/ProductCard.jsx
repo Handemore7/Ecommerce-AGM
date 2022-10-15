@@ -22,12 +22,18 @@ const ProductCard = ({info}) => {
   }
 
   const handleCompareButton = (e) => {
-    setActive(!active) 
+    if (info.quantityAvailable) {
+      alert(info.title + ' está siendo comparado')
+    } else {
+      alert('Se puede realizar la comparación pero no hay unidades de: '+info.title )
+    }
   }
 
 
   return (
-    <div className={` cardContainer ${info.quantityAvailable == undefined ? ' cardDisabled': ''} ${!active == '' ? 'cardDisabled' : ''}`}>
+    <div className={`cardContainer`}>
+      {!info.quantityAvailable ? <div className='cardIsDisabled'></div> : null}
+      
       <div className='cardTopElements'>
         {// Dependiendo de si info.promo es true o false aparece si tiene descuento o no
         info.promo ? 
@@ -52,7 +58,7 @@ const ProductCard = ({info}) => {
       <p className='cardDescription'>{info.description}</p>
 
       {/* Las tarjetas que tengan un precio undefined aparecen como valor no disponible */}
-      <span className='cardPrice'>{info.productPrice == undefined ? <span>Valor no disponible</span> : `$ ${Number(info.productPrice).toFixed(2)} USD`}</span>
+      <span className='cardPrice'>{info.productPrice == undefined ? <span>Not available</span> : `$ ${Number(info.productPrice).toFixed(2)} USD`}</span>
       <div className='cardButtons'>
         <button className='cardAdd' onClick={handleAddButton}><div><AiOutlineShoppingCart /></div><span>Add to cart</span></button>
         <button className='cardCompare' onClick={handleCompareButton}><BiGitCompare /></button>
