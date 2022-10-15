@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 
 //Importar algunos Iconos de la librería de React Icons
-import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
+import { AiFillHeart, AiOutlineHeart, AiOutlineShoppingCart } from 'react-icons/ai';
 import { BiGitCompare } from 'react-icons/bi';
 import { MdOutlineLocalOffer } from 'react-icons/md';
 
@@ -54,7 +54,7 @@ const ProductCard = ({info}) => {
       {/* Las tarjetas que tengan un precio undefined aparecen como valor no disponible */}
       <span className='cardPrice'>{info.productPrice == undefined ? <span>Valor no disponible</span> : `$ ${Number(info.productPrice).toFixed(2)} USD`}</span>
       <div className='cardButtons'>
-        <button className='cardAdd' onClick={handleAddButton}>Add to cart</button>
+        <button className='cardAdd' onClick={handleAddButton}><div><AiOutlineShoppingCart /></div><span>Add to cart</span></button>
         <button className='cardCompare' onClick={handleCompareButton}><BiGitCompare /></button>
       </div>
     </div>
