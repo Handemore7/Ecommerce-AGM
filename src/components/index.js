@@ -9,5 +9,6 @@ export { default as OpenMarket } from './Filters/OpenMarket';
 export { default as Categories } from './Filters/Categories';
 export { default as DispatchStimate } from './Filters/DispatchStimate';
 export { default as QuantityAvailable } from './Filters/QuantityAvailable';
+export { default as Footer } from './Footer';
 
 

@@ -5,13 +5,9 @@ import { DataContext } from '../dataContext';
 
 const Filters = () => {
 
-  const { setSearchFilter, setCurrentPage } = useContext(DataContext);
+  const { setSearchFilter, setCurrentPage, handleCleanFilters } = useContext(DataContext);
 
   //Función para setear todos los filtros a sus valores iniciales
-  const handleCleanFilters = (e) => {
-    setCurrentPage(1);
-    setSearchFilter('');
-  }
 
   return (
     <div className='filtersContainer'>
