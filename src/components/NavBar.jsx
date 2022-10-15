@@ -4,6 +4,10 @@ import { MdKeyboardArrowDown }from 'react-icons/md';
 import DropDown from '../utils/DropDown';
 
 const NavBar = () => {
+  //Maquetado de la barra de navegación, esta no presenta lógica, se importa el componente "Dropdown" y se le pasan unos parametros establecidos de manera local
+  const dropAccount = ['Account','Sign Up','Sign In'];
+  const dropLanguage = ['English','Portuguese'];
+  
   return (
     <div className='navBarContainer'>
       <img src="https://testing-e-commerce.vercel.app/static/media/logo.1599a7c0264f791406f5.png" alt="Logo Agrigobal" className='navBarImg'/>
@@ -25,10 +29,10 @@ const NavBar = () => {
         </div>
         <span className='navBarAboutUs'>News</span>
         <div className='navBarDropDowns'>
-            <DropDown value={'Account'} info={['Account','Sign Up','Sign In']}/>
+            <DropDown value={'Account'} info={dropAccount}/>
         </div>
         <div className='navBarDropDowns'>
-            <DropDown value={'Language'} info={['English','Portuguese']}/>
+            <DropDown value={'Language'} info={dropLanguage}/>
         </div>
       </div>
     </div>

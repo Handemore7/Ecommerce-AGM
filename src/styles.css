@@ -10,14 +10,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Banner */
-
-.bannerContainer{
-}
-
-.bannerContainer img{
-}
-
 /* Barra de navegación */
 
 .navBarContainer{
@@ -108,8 +100,104 @@ body {
 
 /* Sección de CATEGORIAS */
 
-.categoriesContainer{
+.sectionCategory{
+    margin-bottom: 2vh;
+}
 
+.allCategoriesContainer{
+    height: 45vh;
+    padding-left: 5vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.sectionCategoryTitle{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(17, 18, 95);
+    margin: 3vh 7vw;
+    display: block;
+}
+
+.categoryContainer{
+    width: 30vh;
+    height: 40vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin: 0 1vw;
+    box-shadow: 3px 3px 3px rgb(197, 197, 197);
+    position: relative;
+    transition: .4s;
+}
+
+.categoryContainer:hover{
+    transform: translateY(-10px);
+    box-shadow: 3px 3px 3px rgb(46, 170, 241, .7);
+}
+
+.categoryContainer img{
+    align-self: center;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.categoryContainer p{
+    color: rgb(37, 105, 250);
+    font-weight: bold;
+    margin: 2vh 0;
+}
+
+.categoryContent{
+    display: flex;
+    align-items: center;
+}
+
+
+.categoryContent span{
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: rgb(17, 18, 95);
+    width: 70%;
+    padding-right: 10px;
+}
+
+.categoryContent div{
+    width: 8vh;
+    height: 8vh;
+    border-radius: 50%;
+    background-color: rgb(217, 240, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: blue;
+}
+
+.categoryDisabled{
+    background-color: rgba(221, 221, 221, 0.7);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translate(-7%,-4%);
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+.categoryDisabled div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: red;
+    background-color: rgb(255, 224, 210);
+    width: 55%;
+    height: 5vh;
+    border-radius: 25px;
+    margin: 20px;
 }
 
 /* sección de FILTROS */
@@ -631,7 +719,7 @@ body {
     position: absolute;
     width: 100%;
     height: 15%;
-    bottom: 0;
+    bottom: 0px;
 }
 
 .termsContent {
@@ -648,3 +736,12 @@ body {
 .termsContent span:hover{
     color: rgb(240, 88, 88);
 }
+
+/* blue bar */
+.shineContainer {
+    height:220px;
+    width:100%;
+    background:#59cce0;
+    z-index:0;
+    position: relative;
+  }

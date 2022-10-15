@@ -4,10 +4,12 @@ import getCategories from '../../utils/GetCategories';
 
 const Categories = () => {
 
-  const [DropOn, setDropOn] = useState(false);
   const { products } = useContext(DataContext);
+
+  const [DropOn, setDropOn] = useState(false);
   const [ DropDownValue , setDropDownValue] = useState('> Select a category...')
 
+  //con la función getCategories se sacan todas las categorías presentes en "products" para poder hacer las opciones de este filtro
   return (
     <div>
       <h2 className='filtersSection'>Filter Categories</h2>

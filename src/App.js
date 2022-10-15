@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 
 //Se importan todos los componentes existentes que aparezcan directamente en la web
-import { Banner, Footer, NavBar } from './components';
+import { Banner, CategoriesCard, Footer, NavBar } from './components';
 
 //Se importan todas las páginas existentes
 import Products from './pages/Products';
@@ -13,6 +13,35 @@ import axios from "axios";
 
 //Importar DataContext para poder encapsular la aplicación en un contextProvider y poder compartir información desde otros componentes
 import { DataContext } from './dataContext';
+
+//Datos para la sección de categorias
+
+const categoriesData = [
+{
+  image:'https://testing-e-commerce.vercel.app/static/media/cuttin-meet.f16dd2c594c97c5da982.webp',
+  text:'Supply to feed mills',
+  available: true
+},{
+  image:'https://testing-e-commerce.vercel.app/static/media/Supply-to-Farms.b295666dbcb52340085d.webp',
+  text:'Supply to farms',
+  available: false
+},
+{
+  image:'https://testing-e-commerce.vercel.app/static/media/Meat-Offert.41c7135ff54fa2195072.webp',
+  text:'Meat offer',
+  available: true
+},
+{
+  image:'https://testing-e-commerce.vercel.app/static/media/Supply-to-Renderers.2d10b5961db258714930.webp',
+  text:'Supply to renderers',
+  available: true
+},
+{
+  image:'	https://testing-e-commerce.vercel.app/static/media/Machinery-and-Equipment.15a0b9c7581dc852479b.webp',
+  text:'Machinery and equipment',
+  available: false
+},
+]
 
 
 //Pantalla principal, se renderizan solo los componentes y paginas, desde aquí se debe hacer el llamado a la API para conseguir la info aunque tendría sentido hacer el llamado a la API desde la pagina de Products, pasarle qué tipo de productos queremos maybe
@@ -63,19 +92,20 @@ function App() {
       <div>
         <Banner /> 
         <NavBar />
+        <CategoriesCard data={categoriesData}/>
         <div className='productsSection'>
           <Filters />
-          
+          {/* Se filtran los productos, validando si lo escrito en el input está contenido en los productos, aquellos que tengan lo puesto en el input en su nombre son retornados y se envían como un arreglo de objetos a Products para que se rendericen los ya filtrados*/}
           {products ? products.filter((filterName) => {
             searchFilter.toLowerCase() === '' ?
-              filterProducts.push(filterName) : filterName.title.toLowerCase().includes(searchFilter.toLowerCase())?
-                filterProducts.push(filterName): <div>Filtrando...</div>;
+            filterProducts.push(filterName) : filterName.title.toLowerCase().includes(searchFilter.toLowerCase())?
+            filterProducts.push(filterName): <div>Filtrando...</div>;
           }) : 
           <div>Esperando información...</div>}
           <Products products={filterProducts}/>
         </div>
       </div>
-      <Footer /> 
+    <Footer /> 
     </DataContext.Provider>
   );
 }

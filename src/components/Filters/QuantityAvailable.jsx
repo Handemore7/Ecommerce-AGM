@@ -1,6 +1,7 @@
 import React from 'react'
 
 const QuantityAvailable = () => {
+    //Maquetado del filtro, este no presenta lógica
   return (
     <div>
       <h2 className='filtersSection'>Filter Quantity Available (Mt)</h2>

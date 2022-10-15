@@ -12,18 +12,19 @@ const Products = ({products}) => {
   const indexFirstItem = indexLastItem - itemsPerPage;
   const currentItems = products.slice(indexFirstItem, indexLastItem);
 
+  //Funciones para setear la currentPage y que cambien los modelos de la paginación o el  número que indica en qué página se encuentra el usuario
   const handleDecrease = ()=>{
     if (currentPage-1 >= 1 && currentPage-1 <= totalPages) {
       setCurrentPage(currentPage-1)
     }
   }
-
-  const handleIncrease = (e)=>{
+  const handleIncrease = ()=>{
     if (currentPage+1 >= 1 && currentPage+1 <= totalPages) {
       setCurrentPage(currentPage+1);
     }
   }
 
+  //Se reciben todos los productos ya filtrados y se mapean, como se reciben los productos ya filtrados tambien se puede mostrar facilmente la cantidad de productos restantes una vez filtrados
   return (
     <div className='productsContainer'>
         <div className='productsTopData'>

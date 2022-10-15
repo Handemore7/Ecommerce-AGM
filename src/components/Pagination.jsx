@@ -3,7 +3,7 @@ import { DataContext } from '../dataContext';
 
 const Pagination = ({itemsPerPage, totalItems}) => {
 
-  const {currentPage, setCurrentPage,totalPages, setTotalPages} = useContext(DataContext);
+  const {currentPage, setCurrentPage, setTotalPages} = useContext(DataContext);
 
   var pages = [];
   
@@ -13,7 +13,7 @@ const Pagination = ({itemsPerPage, totalItems}) => {
         setTotalPages(pages.length);
       }
 
-
+      //Se setea currentPage cuando se clickea en uno de los elementos de la paginación, este valor de currentPage se usa para determinar en qué página se encuentra actualmente el usuario
     return (
     <div className='paginationContainer'>
         {pages.map(pageNumber => (
