@@ -1,6 +1,6 @@
 # Construcción de la página web de AGM
-Link de referencia: https://testing-e-commerce.vercel.app/shop
-Link del prototipo final: (https://handemore7.github.io/Ecommerce-AGM/)
+- Link de referencia: https://testing-e-commerce.vercel.app/shop
+- Link del prototipo final: (https://handemore7.github.io/Ecommerce-AGM/)
 
 # Herramientas usadas
 - React
