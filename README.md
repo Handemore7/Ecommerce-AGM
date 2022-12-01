@@ -23,7 +23,7 @@ Tanto en el fondo como en la parte de arriba se encuentra una paginación.
 > En la tarjeta de un producto hay un Hover para destacar cuando el usuario pase el mouse, el botón de "Add to cart" muestra un alert con el nombre del producto, al igual que el botón de comparar
 
 - **Footer**
-> Algunos hover añadidos
+> Algunos hover añadidos.
 
 
 # Para ejecutar:
